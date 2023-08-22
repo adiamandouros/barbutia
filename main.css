@@ -1,0 +1,82 @@
+:root {
+    --primary: #552973;
+    --secondary: #B472AD;
+    --accent1: #652D92;
+    --accent2: #E69AC2;
+    font-size: 16px;
+}
+@font-face {
+    font-family: M_PLUS;
+    src: url(/content/fonts/MPLUSRounded1c-Medium.ttf);
+}
+.bg-image {
+    position:fixed;
+    height:100vh;
+    width: 100vw;
+    background-image: url('content/imgs/wall_3192212.jpg');
+    z-index: -1;
+    background-size: cover;
+}
+#topBar{
+    margin:0;
+}
+.logo {
+    max-height:15rem;
+}
+h1{
+    white-space: nowrap;
+    font-family: M_PLUS, sans-serif;
+}
+/* .navbar{
+    transition: opacity 1s ease 1s !important;
+} */
+
+.neonText {
+    text-shadow:
+        0 0 0.0875em #fff,
+        0 0 0.125em var(--accent2),
+        0 0 0.2625em var(--accent2),
+        0 0 0.525em var(--accent2),
+        0 0 1.025em var(--primary),
+        0 0 1.15em var(--primary),
+        0 0 1.275em var(--primary),
+        0 0 1.8875em var(--primary);
+}
+
+.egg {
+    opacity:0;
+    transition: opacity 1s ease 1s !important;
+    z-index: 1;
+    max-height: 20rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:white;
+}
+.main-element{
+    /* padding:1rem 0; */
+    border-radius: 0.5rem;
+    font-size:2rem;
+}
+.main-card {
+    box-shadow: 0 0 1.5rem -0.8rem var(--secondary);
+}
+.main-element>img{
+    max-width: 100%;
+}
+i{
+    z-index: 100;
+    transform: scale(1);
+    transition: all ease .3s;
+    position: relative;
+}
+i:hover{
+    transform: scale(1.3);
+}
+#mailButton{
+    display: inline;
+}
