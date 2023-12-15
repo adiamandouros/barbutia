@@ -23,13 +23,13 @@
     z-index: -1;
     background-size: cover;
 }
-a {
+.main>a, p>a {
     color:var(--secondary) !important;
 }
-a:visited{
+.main>a:visited, p>a{
     color:var(--accent1) !important;
 }
-a:hover {
+.main>a:hover, p>a{
     color:var(--accent2) !important;
 }
 #topBar{
