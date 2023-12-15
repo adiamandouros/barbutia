@@ -42,7 +42,7 @@ h1{
         0 0 1.275em var(--primary),
         0 0 1.8875em var(--primary);
 }
-form{
+form > * {
     z-index: 5;
 }
 
