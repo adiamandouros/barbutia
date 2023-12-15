@@ -19,7 +19,8 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
         document.getElementById("nextGamePlace").setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + nextgame.arena.coordinates.replace(',','%2C'));
         document.getElementById("team1Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team1.logo);
         document.getElementById("team2Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team2.logo);
-        'https://www.google.com/maps/place/37.958229,23.669898'
-        'https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393'
+        document.getElementById("debugShit").textContent='https://www.google.com/maps/search/?api=1&query=' + nextgame.arena.coordinates.replace(',','%2C');
+        // 'https://www.google.com/maps/place/37.958229,23.669898'
+        // 'https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393'
     }
     );
