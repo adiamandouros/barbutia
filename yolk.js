@@ -7,6 +7,7 @@ document.addEventListener('keydown', (event) => {
         console.log(finalKeys);
         if(finalKeys[0]==1 && finalKeys[1]==3 && finalKeys[2]==1 && finalKeys[3]==2){
             let egg = document.getElementsByClassName('egg')[0];
+            egg.style.visibility = "visible";
             egg.style.opacity = 0.5;
         }
         finalKeys = finalKeys.slice(1);

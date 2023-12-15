@@ -42,8 +42,12 @@ h1{
         0 0 1.275em var(--primary),
         0 0 1.8875em var(--primary);
 }
+form{
+    z-index: 5;
+}
 
 .egg {
+    visibility: hidden;
     opacity:0;
     transition: opacity 1s ease 1s !important;
     z-index: 1;
