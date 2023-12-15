@@ -48,6 +48,12 @@ h1{
     transition: opacity 1s ease 1s !important;
     z-index: 1;
     max-height: 20rem;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .main {
@@ -85,4 +91,7 @@ i:hover{
 }
 .main-element>h2{
     color:var(--secondary)
+}
+.main-element>a{
+    color:var(--accent2)
 }
