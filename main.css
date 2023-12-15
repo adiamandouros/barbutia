@@ -9,6 +9,12 @@
     font-family: M_PLUS;
     src: url(/content/fonts/MPLUSRounded1c-Medium.ttf);
 }
+::selection {
+    background: var(--primary);
+}
+::-moz-selection { /* Code for Firefox */
+    background: var(--primary);
+}
 .bg-image {
     position:fixed;
     height:100vh;
@@ -16,6 +22,15 @@
     background-image: url('content/imgs/wall_3192212.jpg');
     z-index: -1;
     background-size: cover;
+}
+a {
+    color:var(--secondary) !important;
+}
+a:visited{
+    color:var(--accent1) !important;
+}
+a:hover {
+    color:var(--accent2) !important;
 }
 #topBar{
     margin:0;
