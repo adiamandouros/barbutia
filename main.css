@@ -80,3 +80,9 @@ i:hover{
 #mailButton{
     display: inline;
 }
+.teamlogo{
+    height:50px;
+}
+.main-element>h2{
+    color:var(--secondary)
+}
