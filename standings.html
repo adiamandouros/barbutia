@@ -2,6 +2,7 @@
 <html lang="gr">
   <head>
     <link href="main.css" rel="stylesheet">
+    <link href="standings.css" rel="stylesheet">
     <link href="bootstrap-5.3.0-dist\css\bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap-5.3.0-dist\js\bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/eda4fe9610.js" crossorigin="anonymous"></script>
@@ -49,7 +50,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="roster.html">Ρόστερ</a>
@@ -58,7 +59,7 @@
               <a class="nav-link" href="matches.html">Αγώνες</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="standings.html">Βαθμολογία</a>
+              <a class="nav-link active" href="standings.html">Βαθμολογία</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,39 +82,21 @@
     </nav>
 
     <div class="container-fluid main">
-      <div class="container-xxl main-element bg-dark main-card my-1 py-2">
-        <p>Η σελίδα των fans της καλύτερης (αντικειμενικά) ομάδας του B.I.G.</p>
-        <h2>ΣΠΛΗΝΑΝΤΕΡ ΚΟΝΣΤΡΑΞΙΟ</h2>
-      </div>
-
-      <div class="container-xxl main-element bg-dark main-card my-1 py-2">
-        <h2>ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ</h2>
-        <img src="" alt="team1 logo" class="teamlogo" id="team1Logo">
-        <span class="teamName" id="team1"></span>
-        -
-        <span class="teamName" id="team2"></span>
-        <img src="" alt="team2 logo" class="teamlogo" id="team2Logo">
-        <p id="nextGameDate"></p>
-        <a id="nextGamePlace" href="https://www.google.com/maps/search"></a>
-      </div>
-
-      <div class="container-xxl main-element my-1 py-2">
-        <div class="row">
-          <img src="content\imgs\big.png" alt="BIG" class="img-fluid col">
-          <img src="content\imgs\kiousis.png" alt="Kiousis" class="img-fluid col">
-          <img src="content\imgs\big.png" alt="BIG" class="img-fluid col">
+        <div class="container-xxl main-element bg-dark main-card my-1 py-2">
+            <div class="row">
+                <span class="col">#</span>
+                <span class="col-2">Ομάδα</span>
+                <span class="col">Βαθμοί</span>
+                <span class="col">Παιχν.</span>
+                <span class="col">Νίκες</span>
+                <span class="col">Ήττες</span>
+                <span class="col">+</span>
+                <span class="col">-</span>
+            </div>
         </div>
-      </div>
-      <div class="container-xxl main-element bg-dark main-card p-5">
-        <p>Η ομάδα ιδρύθηκε το καλοκαίρι του 2022, και έκανε την πρώτη της επίσημη εμφάνιση τον Σεπτέμβριο του ίδιου χρόνου, στο τουρνουά <a href="https://backinthegame.gr">BIG</a>. Συμμετείχε στην κατηγορία League 1 της διοργάνωσης, και κατάφερε να κερδίσει το τρόπαιο στην παρθενική της χρονιά. Φέτος αγωνίζεται στην κατηγορία ELITE της ίδιας διοργάνωσης.</p>
-        <p>Στόχος μας δεν είναι οι νίκες, αλλά το καλό μπάσκετ, η παρέα, και τα καραγκιοζηλίκια. Α, και οι νίκες.</p>
-        </p>
-      </div>
-
     </div>
-  
+
   </body>
-  <script src="nextgame.js"></script>
-  <script src="yolk.js"></script>
   <script src="pageSubtitle.js"></script>
+  <script src="standings.js"></script>
 </html>

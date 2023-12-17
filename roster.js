@@ -18,8 +18,11 @@ nicknames = {
     '44': 'Γκάμπε'
 }
 
-fetch('https://yioka.eu/api/mparmpoutia.php?method=players&team_id=617')
+fetch('https://yioka.eu/api/mparmpoutia.php?method=teams')
 .then(response => response.json())
+.then(data => data.filter((team) => team.id=='617'))
+.then(data => data[0])
+.then(data => data.players)
 .then(data => {
     // console.log(data);
     
