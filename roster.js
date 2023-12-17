@@ -18,14 +18,12 @@ nicknames = {
     '44': 'Γκάμπε'
 }
 
-fetch('https://yioka.eu/api/mparmpoutia.php?method=teams')
+fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
 .then(response => response.json())
-.then(data => data.filter((team) => team.id=='617'))
-.then(data => data[0])
 .then(data => data.players)
 .then(data => {
-    // console.log(data);
-    
+        
+    console.log(data);
     for (const position of ['guard', 'forward', 'center']){
         for(let i=0; i<=99; i++){
             for (const [id,player] of Object.entries(data)){
