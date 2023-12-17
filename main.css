@@ -67,6 +67,8 @@ form > * {
     transition: opacity 1s ease 1s !important;
     z-index: 1;
     max-height: 20rem;
+    height: 100% !important;
+    width: auto !important;
     user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -85,7 +87,7 @@ form > * {
 .main-element{
     /* padding:1rem 0; */
     border-radius: 0.5rem;
-    font-size:2rem;
+    font-size: 1.5rem;
 }
 .main-card {
     box-shadow: 0 0 1.5rem -0.8rem var(--secondary);
