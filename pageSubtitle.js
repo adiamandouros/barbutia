@@ -9,7 +9,8 @@ const subtitles = [
     'Όχι καμαρωτός, καμαρώτος',
     'Πιάσε ένα δίγκαλτσο',
     'Κόκκινες αμαζόνες',
-    'και τάκα τούκα'
+    'και τάκα τούκα',
+    'Pancakes στο Γαλάτσι'
 ]
 
 const subtitle = subtitles[Math.floor(Math.random()*subtitles.length)];

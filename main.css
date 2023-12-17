@@ -36,7 +36,7 @@
     margin:0;
 }
 .logo {
-    max-height:15rem;
+    max-height:10rem;
 }
 h1{
     white-space: nowrap;
@@ -87,7 +87,7 @@ form > * {
 .main-element{
     /* padding:1rem 0; */
     border-radius: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
 }
 .main-card {
     box-shadow: 0 0 1.5rem -0.8rem var(--secondary);
