@@ -4,7 +4,7 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
     // console.log(data)
     data.forEach(element => {
         let score1, score2;
-        // console.log(element);
+        console.log(element);
         const match = document.createElement('div');
         match.classList.add('container-xxl', 'main-match', 'bg-dark', 'main-card', 'my-1', 'py-2');
 
@@ -23,6 +23,12 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
             score1 = '', score2 ='';
             descrTime.textContent = new Intl.DateTimeFormat('el-GR', {hour:'numeric', minute:'numeric', hour12:false, day:'numeric',month:'2-digit'}).format(new Date(element.matchDatetime));
             descrPlace.textContent = element.arena.name;
+        }
+        else if(element.postponed){
+            score1 = '', score2 ='';
+            descrTime.textContent = new Intl.DateTimeFormat('el-GR', {hour:'numeric', minute:'numeric', hour12:false, day:'numeric',month:'2-digit'}).format(new Date(element.matchDatetime));
+            descrPlace.textContent = 'Αναβλήθηκε';
+            descrPlace.classList.add('text-warning');
         }
         else{
             score1 = element.scoreTeam1;
