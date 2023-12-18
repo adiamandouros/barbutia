@@ -2,7 +2,7 @@ let finalKeys = []
 
 document.addEventListener('keydown', (event) => {
     finalKeys.push(event.key);
-    alert(JSON.stringify(event));
+    alert(event.keyCode);
     console.log(finalKeys);
     if(finalKeys.length>=4){
         console.log(finalKeys);
