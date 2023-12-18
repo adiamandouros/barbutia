@@ -15,7 +15,7 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keyup', (event)=>{
     const inputs = document.querySelectorAll('input');
-    inputs.foreach(element => {
+    inputs.forEach(element => {
       if(element.value==1312) {
         let egg = document.getElementsByClassName('egg')[0];
         egg.style.visibility = "visible";
