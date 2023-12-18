@@ -12,7 +12,7 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
         let descrType = document.createElement('span');
         let descrPlace = document.createElement('span');
         let descrTime = document.createElement('span');
-        description.classList.add('justify-content-around', 'row', 'matchDescription');
+        description.classList.add('justify-content-around', 'row', 'matchDescription', 'align-items-center', 'p-0', 'm-0');
         descrType.classList.add('col');
         descrPlace.classList.add('col');
         descrTime.classList.add('col');
