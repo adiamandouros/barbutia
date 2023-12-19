@@ -12,16 +12,11 @@
 ::selection {
     background: var(--primary);
 }
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none !important;
-}
 ::-moz-selection { /* Code for Firefox */
     background: var(--primary);
 }
 .bg-image {
+    box-sizing: border-box;
     position:fixed;
     height:100vh;
     width: 100vw;
