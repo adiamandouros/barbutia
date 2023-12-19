@@ -1,5 +1,5 @@
 const nicknames = {
-    '0': 'Ντούνκερ',
+    '00': 'Ντούνκερ',
     '3': 'Απαράμιλλο Στυλ',
     '4': 'Μπουλντόζα με προσποίηση',
     '7': 'Βελούδινο σφυρί',
@@ -33,22 +33,24 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
                 if(player.position != position) continue;
                 // console.log(player);
                 const playerID = player.id;
+                let jersey;
+                player.jersey==0 ? jersey='00' : jersey=player.jersey;
                 
                 const card = document.createElement('div');
                 card.classList.add('card', 'm-1', 'p-0', 'accordion-item', 'accordion-header');
                 card.setAttribute('style', 'max-width: 35em;');
                 card.setAttribute('id', playerID);
-                card.innerHTML='<button class="row g-0 accordion-button collapsed p-0 focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + player.jersey + '" aria-expanded="false" aria-controls="collapse' + player.jersey + '">' +
+                card.innerHTML='<button class="row g-0 accordion-button collapsed p-0 focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + jersey + '" aria-expanded="false" aria-controls="collapse' + jersey + '">' +
                                     '<div class="col-3">' +
                                         '<div class="imageWrapper position-relative">' + 
-                                            '<img class="top-0 start-0 img-fluid rounded" src="content/imgs/players/resizedTrue/' + player.jersey + '.png" alt="' + player.jersey + '">' +
-                                            '<img class="hide position-absolute top-0 start-0 img-fluid rounded" src="content/imgs/players/resized/' + player.jersey + '.jpg" alt="' + player.jersey + '">' +
+                                            '<img class="top-0 start-0 img-fluid rounded" src="content/imgs/players/resizedTrue/' + jersey + '.png" alt="' + jersey + '">' +
+                                            '<img class="hide position-absolute top-0 start-0 img-fluid rounded" src="content/imgs/players/resized/' + jersey + '.jpg" alt="' + jersey + '">' +
                                         '</div>' +
                                     '</div>' +
                                     '<div class="col">' +
                                         '<div class="card-body pe-0">' +
-                                            '<h5 class="card-title">' + player.jersey + '. ' + player.surname.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() + ' ' + '</h5>' +
-                                        '   <h6 class="card-subtitle mb-2 text-muted">' + nicknames[player.jersey] + '</h6>' +
+                                            '<h5 class="card-title">' + jersey + '. ' + player.surname.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() + ' ' + '</h5>' +
+                                        '   <h6 class="card-subtitle mb-2 text-muted">' + nicknames[jersey] + '</h6>' +
                                         '</div>' +
                                     '</div>' +
                                 '</button>';
