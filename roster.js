@@ -35,10 +35,10 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
                 const playerID = player.id;
                 
                 const card = document.createElement('div');
-                card.classList.add('card', 'm-1', 'p-0', 'pe-1', 'accordion-item', 'accordion-header');
+                card.classList.add('card', 'm-1', 'p-0', 'accordion-item', 'accordion-header');
                 card.setAttribute('style', 'max-width: 35em;');
                 card.setAttribute('id', playerID);
-                card.innerHTML='<button class="row g-0 accordion-button collapsed p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + player.jersey + '" aria-expanded="false" aria-controls="collapse' + player.jersey + '">' +
+                card.innerHTML='<button class="row g-0 accordion-button collapsed p-0 focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + player.jersey + '" aria-expanded="false" aria-controls="collapse' + player.jersey + '">' +
                                     '<div class="col-3">' +
                                         '<div class="imageWrapper position-relative">' + 
                                             '<img class="top-0 start-0 img-fluid rounded" src="content/imgs/players/resizedTrue/' + player.jersey + '.png" alt="' + player.jersey + '">' +

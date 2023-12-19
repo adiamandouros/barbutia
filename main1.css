@@ -12,8 +12,11 @@
 ::selection {
     background: var(--primary);
 }
-*:focus {
-    outline:none;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
 }
 ::-moz-selection { /* Code for Firefox */
     background: var(--primary);
