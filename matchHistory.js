@@ -1,7 +1,7 @@
 fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 .then(response => response.json())
 .then(data => {
-    // console.log(data)
+    console.log(data);
     data.forEach(element => {
         let score1, score2;
         console.log(element);

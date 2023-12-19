@@ -12,6 +12,9 @@
 ::selection {
     background: var(--primary);
 }
+*:focus {
+    outline:none;
+}
 ::-moz-selection { /* Code for Firefox */
     background: var(--primary);
 }
