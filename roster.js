@@ -95,7 +95,7 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
                 }
 
                 const stats = document.createElement('div');
-                stats.setAttribute('id', 'collapse'+player.jersey);
+                stats.setAttribute('id', 'collapse'+jersey);
                 stats.setAttribute('aria-labelledby', playerID);
                 stats.classList.add('accordion-collapse', 'collapse');
                 stats.innerHTML='<div class="accordion-body p-2">' +
