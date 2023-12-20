@@ -27,7 +27,7 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=leagues&id=25')
         const tdDifference = document.createElement('td');
         tdDifference.textContent = team.pointsDiff;
         const tdGP = document.createElement('td');
-        tdGP.textContent = team.gp;
+        tdGP.textContent = team.won+team.lost;
         const tdGw = document.createElement('td');
         tdGw.textContent = team.won;
         const tdGl = document.createElement('td');
