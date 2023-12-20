@@ -43,9 +43,9 @@ h1{
     white-space: nowrap;
     font-family: M_PLUS, sans-serif;
 }
-/* .navbar{
-    transition: opacity 1s ease 1s !important;
-} */
+.nav-item{
+    font-size: 1.25rem !important;
+}
 
 .neonText {
     text-shadow:
