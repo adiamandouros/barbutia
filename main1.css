@@ -12,8 +12,11 @@
 ::selection {
     background: var(--primary);
 }
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
     background: var(--primary);
+}
+body{
+    background-color: black;
 }
 .bg-image {
     box-sizing: border-box;
