@@ -12,7 +12,8 @@ document.addEventListener('keydown', (event) => {
         finalKeys = finalKeys.slice(1);
     }
   }, false);
-
+let soundPlaying = false;
+const eye = new Audio('content/sounds/matoklada.mp3');
 document.addEventListener('keyup', (event)=>{
     const inputs = document.querySelectorAll('input');
     inputs.forEach(element => {
@@ -21,8 +22,21 @@ document.addEventListener('keyup', (event)=>{
         egg.style.visibility = "visible";
         egg.style.opacity = 0.5;
       }
+      if(soundPlaying){
+        console.log('sound was playing');
+        eye.pause();
+        eye.pause();
+        eye.pause();
+        eye.currentTime = 0;
+        soundPlaying = false;
+      }
+      else if(element.value=='sauron') {
+        eye.play();
+        soundPlaying = true;
+      }
     })
 }, false);
+
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
