@@ -1,10 +1,12 @@
-const url = 'https://barbutia.fans/content/imgs/gallery/Original/';
-fetch(url)
-.then(response => response.json())
-.then(data => console.log(data));
+const images = document.querySelectorAll('.img-thumbnail');
+const modalImage = document.getElementById('modalImage');
+const imageDisplayer = new bootstrap.Modal(document.getElementById('imageDisplayer'));
 
-// const imageDisplay = document.getElementById('photosMain');
-// let i=0;
-// for(const image of images) {
-//     console.log(image);
-// }
+for(const image of images) {
+    image.addEventListener('click', (event) => {
+        // console.log(event);
+        modalImage.setAttribute('src', event.srcElement.currentSrc.replace('Resized', 'Original'));
+        modalImage.setAttribute('alt', event.srcElement.alt);
+        imageDisplayer.show()
+    })
+}
