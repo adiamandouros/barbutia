@@ -12,7 +12,8 @@ const subtitles = [
     'και τάκα τούκα',
     'Pancakes στο Γαλάτσι',
     'ΜΠΑΡ',
-    'Επειδή φώναξε;'
+    'Επειδή φώναξε;',
+    'Με σέβας.'
 ]
 
 const subtitle = subtitles[Math.floor(Math.random()*subtitles.length)];
