@@ -44,7 +44,7 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 
         match.innerHTML='<span class="row justify-content-center align-items-center"><span class="col-md text-nowrap text-start text-md-end"><img src="https://storage.googleapis.com/' + element.team1.logo + '" alt="team1 logo" class="teamlogo">' +
                         '<span class="teamName fw-bold"> ' + element.team1.name + '</span></span>' +
-                        '<span class="col-md text-nowrap">' + score1 + '-' + score2 + '</span>'  +
+                        '<span class="col-md col-lg-2 text-nowrap">' + score1 + '-' + score2 + '</span>'  +
                         '<span class="col-md text-nowrap text-end text-md-start"><span class="teamName fw-bold">' + element.team2.name + ' </span>' +
                         '<img src="https://storage.googleapis.com/' + element.team2.logo + '" alt="team2 logo" class="teamlogo" id="team2Logo"></span></span>';
         match.appendChild(description);
