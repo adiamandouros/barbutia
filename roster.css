@@ -1,6 +1,9 @@
 img {
     transition: transform 3.8s cubic-bezier(0.19,1,.22,1);
 }
+.card {
+    max-width: 35em !important;
+}
 .card img{
     max-height:100%;
 }

@@ -55,27 +55,5 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 
         document.querySelector('.main').appendChild(match);
     });
-    search ? matchSearch(search) : null
+    search ? searchAndHide(document.querySelectorAll('.main-match'), search) : null
 });
-
-function matchSearch(input){
-    // const input = document.querySelector('input[name="search"]').value;
-
-    // console.log(input);
-
-    const matches = document.querySelectorAll('.main-match');
-    for(const match of matches){
-        match.setAttribute('style', 'display:none;');
-        // console.log(match);
-        var elements = match.getElementsByTagName('*');
-        for(const element of elements){
-            // console.log(element.textContent);
-            if(element.textContent){
-                if(element.textContent.toUpperCase().includes(input.toUpperCase())){
-                    match.setAttribute('style', 'display:block;');
-                    break
-                }
-            }
-        }
-    }
-}

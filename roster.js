@@ -18,6 +18,7 @@ const nicknames = {
     '44': 'Γκάμπε'
 }
 
+const search = new URL(window.location).searchParams.get('search');
 const matches={};
 fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
 .then(response => response.json())
@@ -38,7 +39,6 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
                 
                 const card = document.createElement('div');
                 card.classList.add('card', 'm-1', 'p-0', 'accordion-item', 'accordion-header');
-                card.setAttribute('style', 'max-width: 35em;');
                 card.setAttribute('id', playerID);
                 card.innerHTML='<button class="row g-0 accordion-button collapsed p-0 focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + jersey + '" aria-expanded="false" aria-controls="collapse' + jersey + '">' +
                                     '<div class="col-3">' +
@@ -151,4 +151,5 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=teams&id=617')
             }
         }
     }
+    search ? searchAndHide(document.querySelectorAll('.card'), search) : null
 });
