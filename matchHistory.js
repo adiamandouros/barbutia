@@ -1,7 +1,9 @@
+const search = new URL(window.location).searchParams.get('search');
 fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 .then(response => response.json())
 .then(data => {
     console.log(data);
+    // console.log(search);
     data.forEach(element => {
         let score1, score2;
         // console.log(element);
@@ -53,20 +55,12 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 
         document.querySelector('.main').appendChild(match);
     });
-})
-.then( () => {
-    document.querySelector('button[name="search"]').addEventListener('click', matchSearch);
-    document.addEventListener('keydown', (event) => {
-        // console.log(event.key);
-        if(event.key=='Enter'){
-            event.preventDefault();
-            matchSearch();
-        }
-    }, false);
+    search ? matchSearch(search) : null
 });
 
-function matchSearch(){
-    const input = document.querySelector('input[name="search"]').value;
+function matchSearch(input){
+    // const input = document.querySelector('input[name="search"]').value;
+
     // console.log(input);
 
     const matches = document.querySelectorAll('.main-match');
