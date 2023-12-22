@@ -17,6 +17,9 @@ img {
 .card:hover .hide{
     opacity: 0;
 }
+.accordion-button{
+    border-radius: var(--bs-accordion-border-radius) !important;
+}
 /* .imageWrapper{
     width: 100%;
     height: 100%;
