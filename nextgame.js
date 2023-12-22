@@ -1,3 +1,4 @@
+const search = new URL(window.location).searchParams.get('search');
 fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 .then(response => response.json())
 .then(data => {
@@ -20,4 +21,6 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
     document.getElementById("team2Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team2.logo);
     // 'https://www.google.com/maps/place/37.958229,23.669898'
     // 'https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393'
+
+    search ? searchAndHide(document.querySelectorAll('.main-element'), search) : null
     });

@@ -1,3 +1,4 @@
+const search = new URL(window.location).searchParams.get('search');
 const images = document.querySelectorAll('.img-thumbnail');
 const modalImage = document.getElementById('modalImage');
 const imageDisplayer = new bootstrap.Modal(document.getElementById('imageDisplayer'));

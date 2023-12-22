@@ -1,3 +1,4 @@
+const search = new URL(window.location).searchParams.get('search');
 fetch('https://yioka.eu/api/mparmpoutia.php?method=leagues&id=25')
 .then(response => response.json())
 .then(response => JSON.parse(response))
@@ -52,7 +53,5 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=leagues&id=25')
         document.querySelector('tbody').appendChild(row);
         i++;
     })
-})
-.then(()=> {
-
+    search ? searchAndHide(document.querySelectorAll('tbody tr'), search) : null
 });
