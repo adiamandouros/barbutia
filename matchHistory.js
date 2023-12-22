@@ -4,7 +4,7 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
     console.log(data);
     data.forEach(element => {
         let score1, score2;
-        console.log(element);
+        // console.log(element);
         const match = document.createElement('div');
         match.classList.add('container-xxl', 'main-match', 'bg-dark', 'main-card', 'my-1', 'py-2');
 
@@ -53,4 +53,35 @@ fetch('https://yioka.eu/api/mparmpoutia.php?method=matches&id=617')
 
         document.querySelector('.main').appendChild(match);
     });
+})
+.then( () => {
+    document.querySelector('button[name="search"]').addEventListener('click', matchSearch);
+    document.addEventListener('keydown', (event) => {
+        // console.log(event.key);
+        if(event.key=='Enter'){
+            event.preventDefault();
+            matchSearch();
+        }
+    }, false);
 });
+
+function matchSearch(){
+    const input = document.querySelector('input[name="search"]').value;
+    // console.log(input);
+
+    const matches = document.querySelectorAll('.main-match');
+    for(const match of matches){
+        match.setAttribute('style', 'display:none;');
+        // console.log(match);
+        var elements = match.getElementsByTagName('*');
+        for(const element of elements){
+            // console.log(element.textContent);
+            if(element.textContent){
+                if(element.textContent.toUpperCase().includes(input.toUpperCase())){
+                    match.setAttribute('style', 'display:block;');
+                    break
+                }
+            }
+        }
+    }
+}
