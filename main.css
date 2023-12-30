@@ -64,7 +64,9 @@ h1{
 .nav-item{
     font-size: 1.25rem !important;
 }
-
+.navbar-toggler-icon{
+    vertical-align: text-top;
+}
 .neonText {
     text-shadow:
         0 0 0.0875em #fff,
