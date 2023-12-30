@@ -132,6 +132,9 @@ i:hover{
 .main-element>h2{
     color:var(--secondary)
 }
+.main-element>h5{
+    color:var(--secondary)
+}
 .main-element>a{
     color:var(--accent2)
 }
