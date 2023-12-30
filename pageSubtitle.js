@@ -17,7 +17,10 @@ const subtitles = [
     'Κάνε στη άκρη πρόστυχη',
     'ΕΚΕΙΕΙΕΙ!',
     'Έεεεελαααααα',
-    'Ο Στράτος ο Καραμάνης δεν είσαι;'
+    'Ο Στράτος ο Καραμάνης δεν είσαι;',
+    'Είσαι ο Μαρκάτος;',
+    'Μπούφλες στην Αλμπέρτα',
+    'Tell me baby, do you recognize me?'
 ]
 
 const subtitle = subtitles[Math.floor(Math.random()*subtitles.length)];
