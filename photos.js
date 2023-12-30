@@ -8,6 +8,17 @@ for(const image of images) {
         // console.log(event);
         modalImage.setAttribute('src', event.srcElement.currentSrc.replace('Resized', 'Original'));
         modalImage.setAttribute('alt', event.srcElement.alt);
-        imageDisplayer.show()
+        imageDisplayer.show();
     })
 }
+
+document.addEventListener('keyup', (event)=>{
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(element => {
+      if(element.value=='bts') {
+        modalImage.setAttribute('src', '/content/imgs/gallery/Original/mersini and me.jpg');
+        modalImage.setAttribute('alt', 'Well hello there!');
+        imageDisplayer.show();
+      }
+    })
+}, false);
