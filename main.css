@@ -119,6 +119,7 @@ i{
     transform: scale(1);
     transition: all ease .3s;
     position: relative;
+    text-shadow: 0 0 3px var(--secondary);
 }
 i:hover{
     transform: scale(1.3);

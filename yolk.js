@@ -1,5 +1,6 @@
 let finalKeys = []
 
+// dimos on desktop
 document.addEventListener('keydown', (event) => {
     finalKeys.push(event.key);
     if(finalKeys.length>=4){
@@ -12,6 +13,9 @@ document.addEventListener('keydown', (event) => {
         finalKeys = finalKeys.slice(1);
     }
   }, false);
+
+
+// dimos on mobile and audio in all vesions
 let soundPlaying = false;
 const eye = new Audio('content/sounds/matoklada.mp3');
 document.addEventListener('keyup', (event)=>{
@@ -36,6 +40,7 @@ document.addEventListener('keyup', (event)=>{
     })
 }, false);
 
+// popover initialization
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
