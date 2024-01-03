@@ -3,6 +3,10 @@ img {
 }
 .card {
     max-width: 35em !important;
+    border: 0 !important;
+}
+.accordion-item{
+    border: 0 !important;
 }
 .card img{
     max-height:100%;
