@@ -20,7 +20,19 @@ const subtitles = [
     'Ο Στράτος ο Καραμάνης δεν είσαι;',
     'Είσαι ο Μαρκάτος;',
     'Μπούφλες στην Αλμπέρτα',
-    'Tell me baby, do you recognize me?'
+    'Tell me baby, do you recognize me?',
+    'Μαύρη αμαζόνα αυθεντική η original',
+    'Makes me wish I wore my sailor outfit',
+    'Στο κορμί μου σα μπλουζάκι',
+    'Σα ναυαγοί, σαν Ροβινσώνες',
+    'Λίτσα Γκαβούση',
+    'Κουμπάρε, το θέμα θεωρείται λήξαν',
+    'Tρώει μπιφτέκι από Everest',
+    'Το κουνιστό πλατάνι ultras',
+    'Μελτέμι resorts',
+    'Ποιός;Ποιός;',
+    'Καλά να είσαι Γιαννάκη'
+
 ]
 
 const subtitle = subtitles[Math.floor(Math.random()*subtitles.length)];
