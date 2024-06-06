@@ -41,20 +41,20 @@ document.addEventListener('keyup', (event)=>{
 }, false);
 
 // popover initialization
-let dice=document.createElement('div');
+// let dice=document.createElement('div');
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  console.log(popoverTriggerEl);
-  if(popoverTriggerEl.classList.contains("logo")){
-    dice = new bootstrap.Popover(popoverTriggerEl);
-  }
+  // console.log(popoverTriggerEl);
+  // if(popoverTriggerEl.classList.contains("logo")){
+  //   dice = new bootstrap.Popover(popoverTriggerEl);
+  // }
   return new bootstrap.Popover(popoverTriggerEl);
 })
 
 
 // console.log(dice);
-dice.addEventListener('click', (event) => {
-    const one = Math.floor(Math.random()*6+1);
-    const two = Math.floor(Math.random()*6+1);
-    dice.setAttribute('data-content', one + " " + two);
-}, false);
+// dice.addEventListener('click', (event) => {
+//     const one = Math.floor(Math.random()*6+1);
+//     const two = Math.floor(Math.random()*6+1);
+//     dice.setAttribute('data-content', one + " " + two);
+// }, false);
