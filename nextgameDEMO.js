@@ -1,0 +1,58 @@
+const search = new URL(window.location).searchParams.get('search');
+fetch('matchesDEMO.json')
+.then(response => {
+    console.log(response)
+    return response.json()
+})
+.then(response => response.content)
+.then(data => {
+    if(data == ''){
+        console.log('no matches found')
+        document.getElementById("nextGameLine").innerHTML="<span class='col'>Δε βρέθηκε επόμενος αγώνας!</span>"
+    }else{
+        let nextgame;
+    // console.log(data);
+        for(let i=0;i<data.length;i++){
+            if(data[i].pending == true){
+                nextgame = data[i];
+                break;
+            }
+        }
+        console.log(nextgame);
+        document.getElementById("team1").textContent=nextgame.team1.name;
+        document.getElementById("team2").textContent=nextgame.team2.name;
+        let nextGameDate = new Date(nextgame.matchDatetime);
+        document.getElementById("nextGameDate").textContent=new Intl.DateTimeFormat('el-GR', {weekday:'long',day:'numeric',month:'numeric', hour:'numeric', minute:'numeric', hour12:false}).format(nextGameDate);
+        document.getElementById("nextGamePlace").textContent=nextgame.arena.name;
+        document.getElementById("nextGamePlace").setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + nextgame.arena.coordinates.replace(',','%2C'));
+        document.getElementById("team1Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team1.logo);
+        document.getElementById("team2Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team2.logo);
+        // 'https://www.google.com/maps/place/37.958229,23.669898'
+        // 'https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393'
+
+    }
+    search ? searchAndHide(document.querySelectorAll('.main-element'), search) : null
+    })
+    .catch((error) => console.error(error));
+
+
+
+
+
+
+
+// const search = new URL(window.location).searchParams.get('search');
+
+//     // console.log(nextgame);
+// document.getElementById("team1").textContent='Μπαρ-Μπούτια';
+// document.getElementById("team2").textContent='Blue Oysters';
+// let nextGameDate = new Date('4/10/2023 21:30');
+// document.getElementById("nextGameDate").textContent=new Intl.DateTimeFormat('el-GR', {weekday:'long',day:'numeric',month:'numeric', hour:'numeric', minute:'numeric', hour12:false}).format(nextGameDate);
+// document.getElementById("nextGamePlace").textContent='Κλειστό Γήπεδο Μιαούλη';
+// document.getElementById("nextGamePlace").setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=37.9537256%2C23.6874198');
+// document.getElementById("team1Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team1.logo);
+// document.getElementById("team2Logo").setAttribute('src', 'https://storage.googleapis.com/'+nextgame.team2.logo);
+// // 'https://www.google.com/maps/place/37.958229,23.669898'
+// // 'https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393'
+
+// search ? searchAndHide(document.querySelectorAll('.main-element'), search) : null
